@@ -13,3 +13,12 @@ class TestLeapYears(unittest.TestCase):
     def testIsLeapFrom100AndNot400(self):
         leap_years = LeapYears()
         self.assertFalse(leap_years.isLeapYear(1900))
+
+    def testIsLeapFor4AndNot100(self):
+        leap_years = LeapYears()
+        self.assertTrue(leap_years.isLeapYear(2008))
+
+
+    def testIsNotLeapForNot4(self):
+        leap_years = LeapYears()
+        self.assertFalse(leap_years.isLeapYear(2017))
